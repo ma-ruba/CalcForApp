@@ -28,7 +28,9 @@ class ViewController: UIViewController {
     
     @IBAction func buttons(_ sender: UIButton) {
         if result.text != "" && sender.tag != 10 && sender.tag != 15 {
-            firstNum = Double(result.text!)!
+            if Double(result.text!) != nil {
+                firstNum = Double(result.text!)!
+            }
             if sender.tag == 11 { //поделить
                 result.text = "/"
             }
